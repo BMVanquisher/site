@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary" style="margin-bottom: 0;">
+    <div class="panel-heading text-center" style="padding-bottom: 0">
+        <span class="text-center" style="color: black; font-size: 160%">Название Статьи</span>
+        <button type="button" class="close" ng-click="closeForm()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <input type="text" class="form-control" id="newsName" style="background-color: whitesmoke; font-size: 100% "
+               placeholder="Название Статьи">
+    </div>
+    <div class="panel-body" style="font-size: 100%">
+        <form class="form-horizontal" role="form" ng-submit="login(credentials)" novalidate>
+           <textarea placeholder="САМА СТАТЬЯ"></textarea>
+            
+            <div class="form-group last" style="margin: 0">
+                <div class="text-center" ui-sref-active="active">
+                    <button style="font-size: 100%; width: 20%" type="submit" ui-sref="mainLK" ng-click="closeForm()" class="col-sm-4 btn btn-primary btn-block center-block">Выйти</button>
+
+                    <button style="font-size: 100%; width: 20%" type="submit" ui-sref="mainLK" ng-click="closeForm()" class="col-sm-4 btn btn-primary btn-block pull-right">Сохранить</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
