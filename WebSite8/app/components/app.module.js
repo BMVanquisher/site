@@ -4,6 +4,8 @@
     angular.module('app', [
         'ngResource',
         'ui.router',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ui.tinymce',
+        'ngSanitize'
     ]);
 })();

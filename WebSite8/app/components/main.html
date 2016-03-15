@@ -1,21 +1,29 @@
-﻿<div class="container" >
+﻿<div class="container" ng-init="admin=true">
     <div id="header" class="row">
         <img style="width: 100%" src="../../Images/corporation.jpg"/>
     </div>
-    <div class="row ">
-        <div class="col-sm-3 col-md-3" style="background-color: wheat ">
-            <ul>
-                <li role="presentation">
-                    <a ng-click="openModal()"> Добавить статью </a>
-                </li>
-                <li>Пункт 1<a ng-click="openModal()">+</a>-</li>
-                <li>Пункт 1</li>
-                <li>Пункт 1</li>
-                <li>Пункт 1</li>
-            </ul>
-        </div>
-        <div class="col-sm-9 col-md-9 text-center">
-            <b> статья </b>
-        </div>
+    <p class="row ">
+    <div class="col-sm-3 col-md-3" style="background-color: wheat">
+
+        <span role="presentation" ng-show="admin">
+                <a ng-click="openModal()"> Добавить статью </a>
+            </span>
+        <ul>
+            <li ng-repeat="item in news">
+                <a ng-click="changeSelectedItem(item)">{{item.Title}} </a> <a ng-show="admin" class="pull-right" ng-click="openModalEdit(item)">Edit</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-md-9" >
+        <p class="text-center">
+            <strong>{{selectedItem.Title}}</strong>
+        </p>
+        <br>
+        <p ng-if="isHtml==false">
+            {{selectedItem.Body}}
+        </p>
+        <p>
+            <div ng-if="isHtml==true" ng-bind-html="getHtml()"></div>
+        </p>
     </div>
 </div>

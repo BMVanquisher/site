@@ -1,22 +1,22 @@
 ﻿<div class="panel panel-primary">
     <div class="panel-heading text-center">
-        <span class="text-center">Cоздать Статью</span>
+        <span class="text-center">Редактировать Статью</span>
         <button type="button" class="close" ng-click="closeForm()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="panel-body">
         <form method="post" class="form-horizontal form-group" role="form" novalidate>
-            <input type="text" ng-model="item.Title" class="form-control center-block" id="newsName" placeholder="Название Статьи">
+            <input type="text" ng-model="selectedItem.Title" class="form-control center-block" id="newsName" placeholder="Название Статьи">
             <br>
-            <textarea data-ui-tinymce data-ng-model="text">Hello, World!</textarea>
+            <textarea data-ui-tinymce data-ng-model="selectedItem.Body">Hello, World!</textarea>
         </form>
     </div>
     <div class="panel-footer">
         <div class="form-group">
             <div class="text-center" ui-sref-active="active">
                 <button style="font-size: 100%; width: 20%" type="submit" ng-click="closeForm()" class="col-sm-4 btn btn-primary btn-block center-block">Выйти</button>
-                <button style="font-size: 100%; width: 20%" type="submit" ng-click="addForm(item)" class="col-sm-4 btn btn-primary btn-block pull-right">Сохранить</button>
+                <button style="font-size: 100%; width: 20%" type="submit" ng-click="editForm(selectedItem)" class="col-sm-4 btn btn-primary btn-block pull-right">Сохранить</button>
             </div>
         </div>
     </div>
